@@ -14,7 +14,6 @@ export class ProgramsComponent implements OnInit {
   programs: IProgram[] = []
 
   ngOnInit(){
-    this.spacexService.getSpaceXLaunches();
-   
+    this.spacexService.getSpaceXLaunches();   
   }
 }

@@ -1,4 +1,9 @@
-<div class="container" >
+<div class="message" *ngIf="spacexService.isLoading$ | async">
+    <div>
+        <h1 class="loading">We are getting Data from Spacex<span>.</span><span>.</span><span>.</span></h1>
+    </div>
+</div>
+<div *ngIf="!(spacexService.isLoading$ | async)" class="container" >
     <app-program [program]="program" 
     class="card-container" *ngFor="let program of spacexService.programs$ | async"></app-program>
 </div>
