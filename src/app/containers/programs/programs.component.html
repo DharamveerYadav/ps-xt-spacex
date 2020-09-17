@@ -1,3 +1,4 @@
-<div *ngFor="let program of spacexService.programs$ | async">
-    <app-program [program]="program" ></app-program>
+<div class="container" >
+    <app-program [program]="program" 
+    class="card-container" *ngFor="let program of spacexService.programs$ | async"></app-program>
 </div>

@@ -7,7 +7,9 @@ export interface IFilter {
 
   export interface IProgram {
     image: string;
-    title: string;    
+    missionName: string; 
+    flightNumber: number;
+    missionId: string[];
     launchYear: string;
     launchSuccess: boolean;
 }

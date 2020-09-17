@@ -20,11 +20,12 @@ export class SpaceXService {
         return this._http.get(url)
         .pipe(
             map((res: []) => {
-              console.log("inside map url", res);
               let temp: IProgram[] = []
                res.forEach((value: any) => {
                temp.push({
-                       title: value.mission_name,
+                       missionName: value.mission_name,
+                       flightNumber: value.flight_number,
+                       missionId: value.mission_id,
                        image: value.links.mission_patch_small,
                        launchYear: value.launch_year,
                        launchSuccess: value.launch_success
@@ -49,9 +50,7 @@ export class SpaceXService {
             url = url + `&launch_year=${filterQuery.launchYear}`;
         }
         } 
-        console.log("url ", url);
         this.getProgramLaunches(url).subscribe(launches => {
-            console.log("launches ", launches);
             this._programs.next(launches);
         });     
     }

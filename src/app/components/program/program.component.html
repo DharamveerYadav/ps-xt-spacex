@@ -1,14 +1,49 @@
 
-    <div class="card-container">
+    
       <article  class="card">
           <a href="#">
               <picture class="thumbnail">
                   <img [src]="program.image" alt="">
               </picture>
-              <div class="card-content">
-                  <h2>{{program.title}}</h2>
-              </div><!-- .card-content -->
-          </a>
+           
+            </a>
+            <div class="card-content">
+            <span class="title bold">
+                {{program.missionName}} #{{program.flightNumber}}
+            </span>
+            <table>
+                <tr>
+                    <td>
+                      <span class="bold">Mission Ids:</span>
+                    </td>
+                    <td>
+                        <ul>
+                            <li *ngFor="let id of program.missionId">{{id}}</li>
+                        </ul>
+                    </td>                      
+                </tr>
+                <tr>
+                    <td>
+                        <span class="bold">Launch Year:</span>
+                    </td>
+                    <td>
+                        {{program.launchYear}}
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span class="bold">Successful Launch:</span>
+                    </td>
+                    <td>
+                        {{program.launchSuccess}}
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span class="bold">Successful Landing:</span>
+                    </td>
+                    <td> Not found </td>
+                </tr>
+            </table>
+        </div>
       </article><!-- .card -->   
-
-  </div>

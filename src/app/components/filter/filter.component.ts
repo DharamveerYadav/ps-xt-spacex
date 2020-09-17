@@ -20,7 +20,6 @@ this.filterQueryParams = {} as IFilter;
   }
 
   filterAsPerLaunchYear(event){
-   console.log(event.target.value);
    this.filterQueryParams.launchYear = event.target.value;
    this._spacexService.getSpaceXLaunches(this.filterQueryParams);
   }

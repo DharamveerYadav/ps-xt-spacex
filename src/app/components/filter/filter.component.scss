@@ -1,3 +1,24 @@
+.filter-container {
+  padding: 10px;
+  margin: 10px;
+  background-color: white;
+  text-align: center;
+  h3 {
+    text-align: start;
+  }
+  .section-container {
+    display: flex;
+    flex-direction: column;  
+    .separator {
+      border: 1px solid black;
+      border-block-end: none;
+    }
+
+  }
+
+ 
+}
+
 .grid-container {
     display: grid;
     grid-template-columns: auto auto;  
@@ -14,7 +35,7 @@
       border: 1px solid rgba(150, 226, 18, 0.2);
       color:black;
       border-radius: 5px;
-      width: 60%;
+      width: 100%;
 
       &:hover, &:active, &:focus {
         background-color:rgba(150, 226, 18, 0.5);
