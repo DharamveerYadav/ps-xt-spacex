@@ -11,5 +11,5 @@ export interface IFilter {
     flightNumber: number;
     missionId: string[];
     launchYear: string;
-    launchSuccess: boolean;
+    launchSuccess: string;
 }

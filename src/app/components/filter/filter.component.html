@@ -5,9 +5,7 @@
         <span class="separator"></span>
         <div class="grid-container">
             <div class="grid-item" *ngFor="let year of launchYears">
-                <label class="btn btn-primary active" >
-                <input type="radio"  name="year" [value]="year" (click)="filterAsPerLaunchYear($event)">{{year}}
-                </label>
+                <button class="button" [ngClass]="(year == isActiveYear) ? 'active' : ''" [value]="year" [id]="year" (click)="filterAsPerLaunchYear($event)">{{year}}</button>
             </div>
         </div>
     </section>
@@ -16,14 +14,10 @@
         <span class="separator"></span>
         <div class="grid-container">
             <div class="grid-item">
-                <label class="btn btn-primary active" >
-                    <input type="radio"  name="launchSuccess" (click)="filterAsPerSuccessLaunch(true)">True
-                    </label>
+                <button class="button" [ngClass]="(isActiveLaunch  === true) ? 'active' : ''" (click)="filterAsPerSuccessLaunch(true)">True</button>
             </div>
             <div class="grid-item">
-                <label class="btn btn-primary active" >
-                    <input type="radio"  name="launchSuccess" (click)="filterAsPerSuccessLaunch(false)">False
-                    </label>
+                <button class="button" [ngClass]="(isActiveLaunch  === false) ? 'active' : ''" (click)="filterAsPerSuccessLaunch(false)">False</button>
             </div>
         </div>
     </section>
@@ -32,15 +26,14 @@
         <span class="separator"></span>
         <div class="grid-container">
             <div class="grid-item">
-                <label class="btn btn-primary active" >
-                    <input type="radio"  name="landSuccess" (click)="filterAsPerLandLaunch(true)">True
-                    </label>
+                <button class="button" [ngClass]="(isActiveLandLaunch === true) ? 'active' : ''" (click)="filterAsPerLandLaunch(true)">True</button>
             </div>
             <div class="grid-item">
-                <label class="btn btn-primary active" >
-                    <input type="radio"  name="landSuccess" (click)="filterAsPerLandLaunch(false)">False
-                    </label>
+                <button class="button" [ngClass]="(isActiveLandLaunch === false) ? 'active' : ''" (click)="filterAsPerLandLaunch(false)">False</button>
             </div>
         </div>
     </section>
+    <div >
+    <button class="button " (click)="filterReset()" > Reset </button>
+   </div>
 </div>

@@ -5,9 +5,6 @@ import { finalize, map, tap } from 'rxjs/operators';
 import { environment } from 'src/environments/environment';
 import { IFilter, IProgram } from '../shared/madel';
 
-
-
-
 @Injectable({
      providedIn:'root'
 })
@@ -18,7 +15,7 @@ export class SpaceXService {
     private _isLoading: BehaviorSubject<boolean> = new BehaviorSubject(true);
     isLoading$: Observable<boolean> = this._isLoading.asObservable();
 
-    getProgramLaunches(url){
+    fetchSpacexData(url){
         this._isLoading.next(true);
         return this._http.get(url)
         .pipe(
@@ -31,7 +28,7 @@ export class SpaceXService {
                        missionId: value.mission_id,
                        image: value.links.mission_patch_small,
                        launchYear: value.launch_year,
-                       launchSuccess: value.launch_success
+                       launchSuccess: value.launch_success ? 'True' : 'False'
   
                    })
                })
@@ -57,7 +54,7 @@ export class SpaceXService {
             url = url + `&launch_year=${filterQuery.launchYear}`;
         }
         } 
-        this.getProgramLaunches(url).subscribe(launches => {
+        this.fetchSpacexData(url).subscribe(launches => {
             this._programs.next(launches);
         });     
     }
