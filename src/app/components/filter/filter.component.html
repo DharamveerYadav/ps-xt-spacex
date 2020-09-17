@@ -5,7 +5,9 @@
         <span class="separator"></span>
         <div class="grid-container">
             <div class="grid-item" *ngFor="let year of launchYears">
-                <button id="aaa" class="button" type="button" [value]="year" (click)="filterAsPerLaunchYear($event)">{{year}}</button>
+                <label class="btn btn-primary active" >
+                <input type="radio"  name="year" [value]="year" (click)="filterAsPerLaunchYear($event)">{{year}}
+                </label>
             </div>
         </div>
     </section>
@@ -14,10 +16,14 @@
         <span class="separator"></span>
         <div class="grid-container">
             <div class="grid-item">
-                <button id="bb" class="button" type="button" (click)="filterAsPerSuccessLaunch(true)">True</button>
+                <label class="btn btn-primary active" >
+                    <input type="radio"  name="launchSuccess" (click)="filterAsPerSuccessLaunch(true)">True
+                    </label>
             </div>
             <div class="grid-item">
-                <button id="bb" class="button" type="button" (click)="filterAsPerSuccessLaunch(false)">False</button>
+                <label class="btn btn-primary active" >
+                    <input type="radio"  name="launchSuccess" (click)="filterAsPerSuccessLaunch(false)">False
+                    </label>
             </div>
         </div>
     </section>
@@ -26,10 +32,14 @@
         <span class="separator"></span>
         <div class="grid-container">
             <div class="grid-item">
-                <button id="cc" class="button" type="button" (click)="filterAsPerLandLaunch(true)">True</button>
+                <label class="btn btn-primary active" >
+                    <input type="radio"  name="landSuccess" (click)="filterAsPerLandLaunch(true)">True
+                    </label>
             </div>
             <div class="grid-item">
-                <button id="cc" class="button" type="button" (click)="filterAsPerLandLaunch(false)">False</button>
+                <label class="btn btn-primary active" >
+                    <input type="radio"  name="landSuccess" (click)="filterAsPerLandLaunch(false)">False
+                    </label>
             </div>
         </div>
     </section>

@@ -31,9 +31,7 @@
     display: grid;
     grid-template-columns: auto; 
     cursor: pointer;
-    padding: 10px;
     background-color: lightgray;
-    margin:10px;
 
     @media screen and (min-width: 701px ) and (max-width: 1024px) {      
         grid-template-columns: auto auto;       
