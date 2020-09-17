@@ -1,3 +1,3 @@
-<div *ngFor="let program of programs">
+<div *ngFor="let program of spacexService.programs$ | async">
     <app-program [program]="program" ></app-program>
 </div>

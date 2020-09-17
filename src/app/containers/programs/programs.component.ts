@@ -9,13 +9,12 @@ import { IFilter, IProgram } from 'src/app/shared/madel';
 })
 export class ProgramsComponent implements OnInit {
 
-  constructor(private _spacexService: SpaceXService) { }
+  constructor(public spacexService: SpaceXService) { }
 
   programs: IProgram[] = []
 
   ngOnInit(){
-    this._spacexService.getSpaceXLaunches().subscribe(programs => {
-      this.programs = programs;
-    })
+    this.spacexService.getSpaceXLaunches();
+   
   }
 }
