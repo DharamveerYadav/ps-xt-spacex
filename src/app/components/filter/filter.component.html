@@ -5,7 +5,8 @@
         <span class="separator"></span>
         <div class="grid-container">
             <div class="grid-item" *ngFor="let year of launchYears">
-                <button class="button" [ngClass]="(year == isActiveYear) ? 'active' : ''" [value]="year" [id]="year" (click)="filterAsPerLaunchYear($event)">{{year}}</button>
+                <button class="button" [ngClass]="(year == isActiveYear) ? 'active' : ''" [value]="year" [id]="year"
+                    (click)="filterAsPerLaunchYear($event)">{{year}}</button>
             </div>
         </div>
     </section>
@@ -14,10 +15,12 @@
         <span class="separator"></span>
         <div class="grid-container">
             <div class="grid-item">
-                <button class="button" [ngClass]="(isActiveLaunch  === true) ? 'active' : ''" (click)="filterAsPerSuccessLaunch(true)">True</button>
+                <button class="button" [ngClass]="(isActiveLaunch  === true) ? 'active' : ''"
+                    (click)="filterAsPerSuccessLaunch(true)">True</button>
             </div>
             <div class="grid-item">
-                <button class="button" [ngClass]="(isActiveLaunch  === false) ? 'active' : ''" (click)="filterAsPerSuccessLaunch(false)">False</button>
+                <button class="button" [ngClass]="(isActiveLaunch  === false) ? 'active' : ''"
+                    (click)="filterAsPerSuccessLaunch(false)">False</button>
             </div>
         </div>
     </section>
@@ -26,14 +29,16 @@
         <span class="separator"></span>
         <div class="grid-container">
             <div class="grid-item">
-                <button class="button" [ngClass]="(isActiveLandLaunch === true) ? 'active' : ''" (click)="filterAsPerLandLaunch(true)">True</button>
+                <button class="button" [ngClass]="(isActiveLandLaunch === true) ? 'active' : ''"
+                    (click)="filterAsPerLandLaunch(true)">True</button>
             </div>
             <div class="grid-item">
-                <button class="button" [ngClass]="(isActiveLandLaunch === false) ? 'active' : ''" (click)="filterAsPerLandLaunch(false)">False</button>
+                <button class="button" [ngClass]="(isActiveLandLaunch === false) ? 'active' : ''"
+                    (click)="filterAsPerLandLaunch(false)">False</button>
             </div>
         </div>
     </section>
-    <div >
-    <button class="button " (click)="filterReset()" > Reset </button>
-   </div>
+    <div>
+        <button class="button " (click)="filterReset()"> Reset </button>
+    </div>
 </div>

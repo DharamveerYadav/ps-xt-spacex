@@ -1,0 +1,6 @@
+{
+    "javascript.implicitProjectConfig.checkJs": true,
+    "editor.formatOnSave": true,
+    "javascript.format.enable": false,
+    "appService.showBuildDuringDeployPrompt": false
+}

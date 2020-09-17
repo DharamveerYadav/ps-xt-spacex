@@ -6,9 +6,7 @@ import { SpaceXService } from './services/spacex.service';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent  {
-  constructor(){}
+export class AppComponent {
+  constructor() { }
   title = 'ps-xt-spacex';
-
- 
 }

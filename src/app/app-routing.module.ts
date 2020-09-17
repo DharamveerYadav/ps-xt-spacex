@@ -7,14 +7,14 @@ const routes: Routes = [
     path: 'programs', component: ProgramsComponent
   },
   {
-    path: '', redirectTo: 'programs' ,pathMatch:'full'
+    path: '', redirectTo: 'programs', pathMatch: 'full'
   }
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes, {
     initialNavigation: 'enabled'
-})],
+  })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
